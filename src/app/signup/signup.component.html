@@ -1,0 +1,39 @@
+
+<div class="signup__container">
+    <div class="container__child signup__welcome">
+      <div class="welcome__content text-center">
+        <h1>Welcome!</h1>
+        <h3>Ready to register?</h3>
+      </div>
+    </div>
+    <div class="container__child signup__form">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+         <div class="user-msg" *ngIf="registerFlag">{{userMsg}}</div>
+            <div class="form-group">
+          <label for="username">firstName</label>
+          <input type="text"  autocomplete="off" formControlName="firstName" id="signupFormFirstName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="username">LastName</label>
+            <input type="text" autocomplete="off" formControlName="lastName" id="signupFormLastName" class="form-control">
+          </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" autocomplete="off" formControlName="email" id="signupFormEmail" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" autocomplete="off" formControlName="password" id="signupFormPassword" class="form-control" placeholder="**********" [pattern]="passwordPattern">
+        </div>
+        <div class="user-msg" *ngIf="password.errors?.pattern">
+          Passwords must be atleast 8 character, one small and one capital letters.
+        </div>
+        <div class="form-group">
+            <label for="password">Re-enter Password</label>
+            <input type="password" autocomplete="off" formControlName="confirmPassword" id="signupFormConfirmPassword" class="form-control" placeholder="**********">
+          </div>
+              <input class="btn btn--form form-control" type="submit" id="signupFormSubmit" value="Register"/>
+      </form>  
+    </div>
+  </div>
+
