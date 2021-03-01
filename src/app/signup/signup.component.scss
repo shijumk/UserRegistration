@@ -9,9 +9,10 @@
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 70%;
+    width: 40%;
+    height: 60%;
     border-radius: 8px;
+    background: #fafafa;
     box-shadow: 0px 3px 7px rgba(0,0,0,.25);
   }
   
@@ -21,11 +22,14 @@
   .container__child {
     height: 100%;
     color: #fff;
+    width: 40%;
+    margin: 0 auto;
   }
   .signup__welcome {
     padding: 2rem;
     align-items: center;
-    background-color: grey;
+    background-color:brown;
+    width: 100%;
   }
   .welcome__content {
     font-size: 12px;
@@ -49,7 +53,7 @@
   }
 
   .form-control {
-    width: 100%;
+    width: 90%;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -70,6 +74,7 @@
     padding: .5rem 2.5rem;
     font-size: .95rem;
     font-weight: 600;
+    margin: 0 auto;
     text-transform: uppercase;
     color: #fff;
     background: grey;
@@ -78,16 +83,22 @@
     &:hover {background: lighten(#111, 13%);}
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
+
   .user-msg {
     font-size: 14px;;
     color: red;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom:10px;
+    width: 110%;
   }
 
   @media only screen and (max-width: 480px) {
     .signup__container {
      width:100%
+    }
+
+    .btn--form {
+      width: 100%;
     }
   }
 
